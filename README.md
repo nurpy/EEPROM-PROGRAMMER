@@ -24,8 +24,7 @@ Example command call in the terminal:
 `python Arduino.py Read EEPROM`
 
 # Configuring the programmer
-You should put the python script in the same directory that you assemble your 6502 scripts-or where the a.out file is produced. You should also make sure to go into the Arduino.py file and change the the com port according to what arduino com you are using. Also make sure to go into the EEPROM_programmer file and change the EEPROM_Size according to what EEPROM you are using( I have the at28c64b)
-
+You should put the python script in the same directory that you assemble your 6502 scripts-or where the a.out file is produced. You should also make sure to go into the Arduino.py file and change the the com port according to what arduino com you are using. Also make sure to go into the EEPROM_programmer file and change the EEPROM_Size according to what EEPROM you are using( I have the at28c64b). Lastly you should connect an LED to the Indicator light as it indicates itf the Arduino is still writing/ reading a program, or if it received the message at all. Debugging tip: unplugging and replugging/reprogrmaing in the arduino can fix the problem sometimes-likely due to the horrible way I managed the heap storage while making this.
 
 
 
