@@ -20,10 +20,13 @@ Erase EEPROM
 Print [file]
 help
 ```
-You should put the python script in the same directory that you assemble your 6502 scripts-or where the a.out file is produced.
-
 Example command call in the terminal:
 `python Arduino.py Read EEPROM`
+
+# Configuring the programmer
+You should put the python script in the same directory that you assemble your 6502 scripts-or where the a.out file is produced. You should also make sure to go into the Arduino.py file and change the the com port according to what arduino com you are using. Also make sure to go into the EEPROM_programmer file and change the EEPROM_Size according to what EEPROM you are using( I have the at28c64b)
+
+
 
 
 
