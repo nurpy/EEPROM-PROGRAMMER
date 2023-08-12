@@ -245,22 +245,25 @@ void decideAction(String x){
       int iterations = processString(response);
       curAdress=blockWrite(iterations,0);
       // write them in
+     // response="";
+     // while (!Serial.available());
+     // response = Serial.readString();
+      //iterations = processString(response);
       
       
-
       while(endCommand != "DONE"){
-        Serial.println("going");
+        response="";
         
         if(endCommand == "CONT"){
           while (!Serial.available());
-          String response = Serial.readString();
+          response = Serial.readString();
           int iterations = processString(response);
           curAdress=blockWrite(iterations,curAdress);
           
         }
         if(endCommand == "SCON"){
           while (!Serial.available());
-          String response = Serial.readString();
+          response = Serial.readString();
           processStringS(response);
           int  previous_command = data[0];
           int repetitions = data[1];
@@ -268,10 +271,12 @@ void decideAction(String x){
           
 
         }
+        
 
       }
+      
   digitalWrite(INDICATOR_LIGHT,LOW);
-  Serial.println("done with total Write");    
+  Serial.println("done");    
 // process response    
   }
 }
@@ -322,6 +327,7 @@ void setup() {
   Serial.begin(9600);
   Serial.setTimeout(100);
   pinMode(INDICATOR_LIGHT,OUTPUT);
+  
 /*
 
   // Program data bytes
